@@ -24,7 +24,7 @@ def create():
                 file.write(line + "\n")
             i = i + 1
 
-# create()
+    menu()   
 
 def view():
     # toView = input("Enter the filename of the file you would like to view. Don't include the branch.") + ".txt"
@@ -41,8 +41,8 @@ def view():
                 print("error was", e) # error not related to entering of filename
         else:
             print("File does not exist. Try again.")
-        
 
+    menu()
 
 def edit():
     fileName = input("Enter the textfile you'd like to edit (without extension) ") + '.txt'
@@ -63,7 +63,7 @@ def edit():
 
     done = False
     while not done:
-        if 1 <= line_number <= len(lines):
+        if 0 <= line_number <= len(lines):
             newText = input("Enter the new text for that line: ")
             
             # Replace the line
@@ -79,9 +79,31 @@ def edit():
         else:
             print("Invalid line number. Please enter a valid line number.")
             line_number = int(input("Which line would you like to edit? "))
-edit()
 
 
+    menu()
 
+def menu():
 
-# Create a menu
+    done = False
+    while done != True:
+        try:
+            choice = int(input("1. Create a file \n2. View and Display a file \n 3. Edit a file \n\n"))
+            if choice == 1:
+                    create()
+                    done = True
+            elif choice == 2:
+                    view()
+                    done = True
+
+            elif choice == 3:
+                    edit()
+                    done = True
+
+            elif choice < 1 or choice > 3:
+                    print("Choose a valid choice")
+                    done = False
+        except ValueError:
+            print("ENTER A NUMBER! ❌")
+
+menu()
