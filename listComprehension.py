@@ -1,3 +1,6 @@
+import math
+
+
 # # 17 list comprehension problems in python
 
 fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange']
@@ -103,5 +106,4 @@ def is_prime(n):
 primes = [number for number in numbers if is_prime(number)] # loop through each number in numbers and apply the is_prime function to it, checking whether the numbers up to its square root are divisors of it.
 
 print(primes) # well I think we know what this does...
-
 
