@@ -13,7 +13,7 @@ class Vector:
         else:
             return ((self.xcomp)**2 + (self.ycomp)**2)**0.5 # does pythagoras to get the magnitude of the vector
 
-    def __str__(self):ww
+    def __str__(self):
         return f"{self.xcomp}i + {self.ycomp}j"
     
     def __add__(self,other):
@@ -31,11 +31,6 @@ class Vector:
             resulty = self.ycomp ** other.ycomp
         else:
             result = pow(self.value, other, modulo)
-        return Vector(resultx,resulty)
-    
-    def __hex__(self):
-        resultx = hex(self.xcomp)
-        resulty = hex(self.ycomp)
         return Vector(resultx,resulty)
     
 def test_vector():
