@@ -14,8 +14,6 @@ def likes():
     else:
         print(f"{names[0]}, {names[1]} and {length-2} others like this")
          
-         
-   
 likes()
 
 # if the length is greater than two, say that the first two people like it and len-2 others do as well.
