@@ -39,11 +39,12 @@ class CD(StockItem):
         print(f"Playing Time: {self.playing_time} minutes")
 
 
-book1 = Book("1984", "George Orwell", "9780451524935", "2025-01-12")
-book1.display_details()
-
-book1.set_loan(True)
-book1.display_details()
-
-cd1 = CD("Abbey Road", "The Beatles", 47, "2024-10-01")
-cd1.display_details()
+def tests():
+    book1 = Book("1984", "George Orwell", "9780451524935", "2025-01-12")
+    cd1 = CD("Abbey Road", "The Beatles", 47, "2024-10-01")
+    
+    items = [book1, cd1]
+    for item in items:
+        item.display_details()
+    
+tests()
