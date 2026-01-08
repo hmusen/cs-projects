@@ -3,7 +3,7 @@ def is_palindrome(n):
 
     
     if str(n) == str(n)[::-1]:
-        print('Already a palindrome')
+        print(n)
         return
         
     else:
@@ -32,9 +32,9 @@ def is_palindrome(n):
                             palindrome_pairs.append( (num1, k, difference) )
                             
 
-    print(palindrome_pairs[0])
+    print(palindrome_pairs)
         
-is_palindrome(54)
+is_palindrome(5335)
 
 # b) (1,9,44)
 
