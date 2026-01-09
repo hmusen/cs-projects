@@ -1,11 +1,8 @@
 from PyQt6 import QtCore 
 from PyQt6 import QtWidgets as qtw
 
-
-
 # import PyQt6.QtCore as qtc
 # import PyQt6.QtGui as qtg
-
 
 # Subclass QMainWindow to customise your application's main window
 class MainWindow(qtw.QMainWindow):
